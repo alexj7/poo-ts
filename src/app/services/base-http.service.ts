@@ -32,6 +32,7 @@ export class BaseHttpService<TypeClass> {
 
   const rta = await productService.getAll();
   console.log('products', rta.length);
+
   const productId = rta[0].id;
   productService.update<Product['id'], UpdateProductDto>(productId, {
     title: 'asa',
